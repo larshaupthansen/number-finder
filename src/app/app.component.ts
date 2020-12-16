@@ -62,7 +62,7 @@ export class AppComponent implements AfterViewInit {
       for(let c=0; c < this.columns; c++) {
         var index = (r)*this.columns + c;
         html += "<div class='piece' id='piece"+index+"'><div class='piece-inner'>"
-              + "<div class='piece-front'>"+this.letters[r]+c+"</div>"
+              + "<div class='piece-front'>"+this.letters[r]+(c+1)+"</div>"
               + "<div class='piece-back'>"+this.randomNumbers[index]+"</div>"
               +"</div></div>";
       }
