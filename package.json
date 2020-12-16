@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build && cd dist/number-finder && az webapp up --location westeurope --name number-picker --html"
+    "deploy": "ng build --optimization && cd dist/number-finder && az webapp up --location westeurope --name number-picker --html"
   },
   "private": true,
   "dependencies": {
