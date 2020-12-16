@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.board {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.piece {
+    background-color:#ccc;
+    box-shadow: 2px;
+    height:180px;
+}
+
+.piece-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+}
+.piece-selected {
+ .piece-inner {
+    .piece-back {    
+        background-color: dodgerblue;
+        color: white;
+    
+        font-size:72px;
+
+    }
+  }
+}
+
+.piece-turned {
+    .piece-inner {
+       transform: rotateY(180deg);
+     }
+   }
+   
+   
+  .piece-front, .piece-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+  .piece-front {
+    background-color: #008800;
+    color: black;
+    line-height: 170px;;
+
+    font-size:72px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+  
+  /* Style the back side */
+  .piece-back {
+    background-color: #ccc;
+    color: black;
+    transform: rotateY(180deg);
+    font-size:36px;
+    line-height: 170px;;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    vertical-align: middle;
+    
+  }
